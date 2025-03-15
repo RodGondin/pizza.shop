@@ -66,6 +66,20 @@ A estrutura de pastas do projeto está organizada da seguinte maneira:
 
 ## 📦 Instalação e Configuração
 
+### 0️⃣ Clonar o Repositório do Back-end
+```sh
+git clone https://github.com/rocketseat-education/pizzashop-api
+cd pizzashop-api
+
+This project depends on Docker to setup database. With Docker installed, clone the project, install dependencies, setup Docker containers and run the application.
+
+bun i
+docker compose up -d
+bun migrate
+bun seed
+bun dev
+```
+
 ### 1️⃣ Clonar o Repositório
 
 ```sh
