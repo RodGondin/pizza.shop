@@ -1,50 +1,119 @@
-# React + TypeScript + Vite
+# 🍕 Pizza Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Sistema de Vendas para Pizzarias
 
-Currently, two official plugins are available:
+O **Pizza Shop** é um frontend responsivo para um sistema de vendas de pizzas e outros produtos. O sistema permite gestão e manipulação de pedidos com dashboard de estatísticas das vendas. O projeto foi feito baseado em um backend real.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **Framework**: React + Vite
+- **Estilização**: Tailwind CSS + ShadCN
+- **Gerenciamento de Estado**: React Hook Form + Zod
+- **Roteamento**: React Router DOM
+- **Requisições HTTP**: Axios
+- **Componentização**: Radix UI
+- **Testes**: Playwright, Testing Library e Vitest
+- **Gráficos**: Recharts
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 📂 Estrutura de Pastas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+A estrutura de pastas do projeto está organizada da seguinte maneira:
+
+```
+📦 pizzashop-web
+├── 📂 node_modules
+├── 📂 playwrigth-report
+├── 📂 public
+├── 📂 src
+│   ├── 📂 api
+│   │   ├── mocks das chamadas a API
+│   │   ├── chamadas a API
+│   ├── 📂 components
+│   │   ├── 📂 ui
+│   │   │   ├── account-menu.tsx
+│   │   │   ├── header.tsx
+│   │   │   ├── nav-link.tsx
+│   │   │   ├── order-status.tsx
+│   │   │   ├── pagination.tsx
+│   │   │   ├── store-profile-dialog.tsx
+│   ├── 📂 lib
+│   │   ├── axios.ts
+│   │   ├── react-query.ts
+│   │   ├── utils.ts
+│   ├── 📂 pages
+│   │   ├── 📂 Layouts
+│   │   ├── 📂 app
+│   │   │   ├── 404.tsx
+│   │   │   ├── error.tsx
+│   │   │   ├── app.tsx
+│   │   │   ├── main.tsx
+│   │   │   ├── routes.tsx
+│   │   │   ├── global.css
+│   ├── 📂 test
+│   │   ├── dashboard.e2e-spec.ts
+│   │   ├── orders.e2e-spec.ts
+│   │   ├── sign-in2.e2e-spec.ts
+│   │   ├── sign-up.e2e-spec.ts
+│   │   ├── store-profile.e2e-spec.ts
+│   ├── 📄 vite.env.ts
+│   ├── 📄 .eslint.json
+├── 📄 .env.local
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📦 Instalação e Configuração
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 1️⃣ Clonar o Repositório
+
+```sh
+git clone https://github.com/rodgondin/pizza.shop.git
+cd pizzashop-web
 ```
+
+### 2️⃣ Instalar as Dependências
+
+```sh
+npm install
+```
+
+### 3️⃣ Executar o Frontend
+
+```sh
+npm run dev
+```
+
+---
+
+## 📌 Funcionalidades Principais
+
+- 📱 **Interface responsiva** para pedidos
+- 📊 **Dashboard administrativo** para gestão dos pedidos
+- 🏷️ **Gerenciamento de pedidos** (aprovação, cancelamento, histórico)
+- 🔐 **Login e Cadastro de contas** para utilização da plataforma
+
+---
+
+## 🖼️ Screenshots
+
+### 📌 Tela de Login
+
+![Home](.github/home.png)
+
+### 📌 Tela de Cadastro
+
+![Cadastro](.github/cadastro.png)
+
+### 📌 Dashboard
+
+![Dashboard](.github/dashboard.png)
+
+### 📌 Lista de Pedidos
+
+![Ordens](.github/ordens.png)
+
+---
+
+💡 **Projeto de estudo fornecido pela @Rocketseat.** 🚀
